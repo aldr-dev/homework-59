@@ -13,3 +13,7 @@ body {
   margin: 0 auto;
   padding: 0 15px;
 }
+
+.container-wrapper {
+  margin-top: 50px;
+}
