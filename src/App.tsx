@@ -11,6 +11,30 @@ const App = () => {
     {id: '3', message: 'Survivor'},
   ]);
 
+  const addMovie = (message: string) => {
+      const newMovie = {id: Math.random().toString(), message};
+      setMovies([...movies, newMovie]);
+  };
+
+  const deleteMovie = (id: string) => {
+    setMovies(movies.filter((movie) => movie.id !== id));
+  };
+
+  const updateMovie = (id: string, newName: string) => {
+    setMovies((prevState) => {
+     return prevState.map((movie) => {
+        if (movie.id === id) {
+          return {
+            ...movie,
+            message: newName,
+          };
+        } else {
+          return movie;
+        }
+      });
+    });
+  };
+
   return (
     <div className="container-wrapper">
       <AddMovieForm onSubmit={addMovie} />

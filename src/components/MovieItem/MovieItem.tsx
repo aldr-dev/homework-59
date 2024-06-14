@@ -25,7 +25,15 @@ const MovieItem: React.FC<Props> = React.memo(({movies, onUpdate, onDelete}) => 
     </>
   );
 }, (prevProps, nextProps) => {
-  return prevProps.movies === nextProps.movies;
+  if (prevProps.movies.length !== nextProps.movies.length) {
+    return false;
+  }
+  for (let i = 0; i < prevProps.movies.length; i++) {
+    if (prevProps.movies[i].id !== nextProps.movies[i].id || prevProps.movies[i].message !== nextProps.movies[i].message) {
+      return false;
+    }
+  }
+  return true;
 });
 
 export default MovieItem;
