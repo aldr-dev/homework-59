@@ -16,6 +16,12 @@ body {
 
 .container-wrapper {
   margin-top: 50px;
+  display: flex;
+  gap: 30px;
+}
+
+.col-1, .col-2 {
+  width: 100%;
 }
 
 .movies-list-inner {
@@ -28,4 +34,16 @@ body {
 
 .main-title {
   font-weight: 400;
+}
+
+.title-joke {
+  margin-top: 0;
+  font-weight: 400;
+}
+
+.error-message {
+  background: #f8d7da;
+  color: #842029;
+  padding: 16px;
+  border-radius: 5px;
 }

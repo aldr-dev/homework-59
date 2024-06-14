@@ -1,0 +1,20 @@
+.joke-container-inner {
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 0 15px;
+  margin-bottom: 15px;
+}
+
+.button-new-joke {
+  background: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition:  .3s ease-in-out;
+}
+
+.button-new-joke:hover {
+  background: #218838;
+}
