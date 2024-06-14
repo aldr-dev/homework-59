@@ -1,6 +1,6 @@
 import './App.css';
 import AddMovieForm from './components/AddMovieForm/AddMovieForm';
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import {MoviesProps} from './types';
 import MovieItem from './components/MovieItem/MovieItem';
 
@@ -10,6 +10,20 @@ const App = () => {
     {id: '2', message: 'The Great Gatsby'},
     {id: '3', message: 'Survivor'},
   ]);
+
+  useEffect(() => {
+    const response = localStorage.getItem('movies');
+    if (response !== null) {
+      const moviesArray: MoviesProps[] = JSON.parse(response);
+      if (moviesArray.length > 0) {
+        setMovies(moviesArray);
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('movies', JSON.stringify(movies));
+  }, [movies]);
 
   const addMovie = (message: string) => {
       const newMovie = {id: Math.random().toString(), message};
@@ -43,7 +57,7 @@ const App = () => {
         <div className="movies-list-inner">
           <MovieItem movies={movies} onUpdate={updateMovie} onDelete={deleteMovie} />
         </div>
-      ): null}
+      ): <span>Movie list is empty. List a couple of your favorite movies.</span>}
     </div>
   );
 };
