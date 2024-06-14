@@ -24,7 +24,7 @@ const AddMovieForm: React.FC<Props> = ({onSubmit}) => {
 
   return (
     <form className="form-movie" onSubmit={onFormSubmit}>
-      <textarea className="movie-item" value={movieName} required placeholder="Enter movie name" onChange={onFieldChange}></textarea>
+      <textarea className="movie-fluid" value={movieName} required placeholder="Enter movie name" onChange={onFieldChange}></textarea>
       <button className="button-submit" type="submit">Add</button>
     </form>
   );

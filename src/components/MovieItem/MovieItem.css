@@ -1,0 +1,25 @@
+.movie-item {
+  background-color: #f0f0f0;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.movie-item-field {
+  width: 85%;
+  padding: 8px;
+}
+
+.movie-item-button-delete {
+  border: none;
+  cursor: pointer;
+  font-size: 30px;
+  padding: 0 15px;
+}
+
+.movie-item-index {
+  font-weight: 500;
+}

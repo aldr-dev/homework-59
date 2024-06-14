@@ -1,11 +1,10 @@
 .form-movie {
   display: flex;
   align-items: center;
-  margin-bottom: 30px;
   gap: 10px;
 }
 
-.movie-item {
+.movie-fluid {
   width: 100%;
   padding: 8px 5px 0 5px;
 }

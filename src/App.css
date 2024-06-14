@@ -17,3 +17,15 @@ body {
 .container-wrapper {
   margin-top: 50px;
 }
+
+.movies-list-inner {
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.main-title {
+  font-weight: 400;
+}
