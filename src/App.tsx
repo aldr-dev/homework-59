@@ -49,7 +49,15 @@ const App = () => {
       } else {
         const dataObject = await response.json();
         const {type, setup, delivery, joke} = dataObject;
-        setJoke({type, setup, delivery, joke});
+        setJoke((prevState) => {
+          return {
+            ...prevState,
+            type,
+            setup,
+            delivery,
+            joke,
+          };
+        });
       }
     } catch (error) {
       console.error(error);
